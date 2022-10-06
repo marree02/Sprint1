@@ -4,11 +4,12 @@ import javax.swing.*;
 
 public class kottattande extends Växt implements printVäxt {
 
+    protected Name nameM = Name.MEATLOAF;
     private double baseShake = 0.1;
     private double extraShake = 0.2;
 
-    public kottattande(String name, double length) {
-        super(name, length);
+    public kottattande(double length,Name name) {
+        super(length,name);
     }
 
     public double getBaseShake() {
@@ -25,7 +26,8 @@ public class kottattande extends Växt implements printVäxt {
 
     @Override
     public void print() {
-        JOptionPane.showMessageDialog(null,"Köttätande växten: "+ getName() + " behöver " + calcKott()+"L protein vatten om dagen");
+        JOptionPane.showMessageDialog(null,"Köttätande växten: "+ nameM.typeOfName + " behöver " + calcKott()+"L "
+                + Water.PROTEINDRYCK.typeOfWater + " om dagen");
 
     }
 }

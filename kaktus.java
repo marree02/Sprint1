@@ -4,19 +4,24 @@ import javax.swing.*;
 
 public class kaktus extends Växt implements printVäxt{
 
-    private int mineralWater = 2;
-
-    public kaktus(String name, double length) {
-        super(name, length);
+    public Name nameI = Name.IGGE;
+    private int water = 2;
+    public kaktus(double length, Name name) {
+        super(length, name);
 
     }
 
     public int getWater() {
-        return mineralWater;
+        return water;
+    }
+
+    public void setWater(int water) {
+        this.water = water;
     }
 
     @Override
     public void print() {
-        JOptionPane.showMessageDialog(null,"Kaktusen: "+ getName() + " behöver " + mineralWater +"cl mineral vatten om dagen");
+        JOptionPane.showMessageDialog(null,"Kaktusen: "+ nameI.typeOfName + " behöver " + getWater() +"cl "+
+                Water.MINERALVATTEN.typeOfWater+" om dagen");
     }
 }

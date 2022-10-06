@@ -3,33 +3,34 @@ package Inlämningsuppgift1;
 import javax.swing.*;
 
 public class Main {
-//test för github:)dqwd qwd qw
+
 
     public Main() {
 
-        kaktus igge = new kaktus("Igge", 20.0);
-        palm laura = new palm("Laura", 5.0);
-        kottattande meatloaf = new kottattande("Meatloaf", 0.7);
-        palm putte = new palm("Putte", 1.0);
+        kaktus igge = new kaktus(20.0,Name.IGGE);
+        palm laura = new palm( 5.0,Name.LAURA);
+        kottattande meatloaf = new kottattande(0.7, Name.MEATLOAF);
+        palm putte = new palm(1.0, Name.PUTTE);
         String v;
         while (true) {
             v = JOptionPane.showInputDialog("Vilken växt vill du vattna av Igge, Laura, Meatloaf, Putte?");
-            if (v.equals(igge.getName()) || v.equals(laura.getName()) || v.equals(meatloaf.getName()) || v.equals(putte.getName())) {
+            if (v.equals(igge.nameI.typeOfName) || v.equals(laura.nameL.typeOfName) || v.equals(meatloaf.nameM.typeOfName) || v.equals(putte.nameP.typeOfName)) {
                 JOptionPane.showMessageDialog(null, "Växten är inlaggd i växthotellet Greenest");
                 break;
             } else {
                 JOptionPane.showMessageDialog(null, "växten är ej inlaggd i växthotellet Greenest");
             }
         }
-        if (v.equals(igge.getName())) {
+        if (v.equals(igge.nameI.typeOfName)) {
             igge.print();
-        } else if (v.equals(laura.getName())) {
+        } else if (v.equals(laura.nameL.typeOfName)) {
            laura.print();
-        } else if (v.equals(meatloaf.getName())) {
+        } else if (v.equals(meatloaf.nameM.typeOfName)) {
             meatloaf.print();
-        } else if (v.equals(putte.getName())) {
+        } else if (v.equals(putte.nameP.typeOfName)) {
            putte.print();
         }
+
 
     }
 
