@@ -7,6 +7,7 @@ public class Main {
 
     public Main() {
 
+        //Polymorfism
         kaktus igge = new kaktus(20.0,Name.IGGE);
         palm laura = new palm( 5.0,Name.LAURA);
         kottattande meatloaf = new kottattande(0.7, Name.MEATLOAF);

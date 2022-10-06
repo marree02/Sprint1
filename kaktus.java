@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class kaktus extends Växt implements printVäxt{
 
+    //inkapsling
     public Name nameI = Name.IGGE;
     private int water = 2;
     public kaktus(double length, Name name) {
