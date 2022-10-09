@@ -1,25 +1,27 @@
 package Inlämningsuppgift1;
 
 public class Växt {
-    protected Name name;
+
+
+    private String name;
     private double length;
 
 
 
 
-    public Växt(double length, Name name) {
+    public Växt(double length, String name) {
        this.name = name;
         this.length = length;
 
     }
 
 
- public Name getName() {
+ public String getName() {
        return name;
    }
 
    public void setName(String name) {
-       this.name = Name.valueOf(name);
+       this.name = name;
    }
 
     public double getLength() {
@@ -30,5 +32,7 @@ public class Växt {
         this.length = length;
     }
 
+    public void print() {
+    }
 }
 

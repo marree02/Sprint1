@@ -8,27 +8,28 @@ public class Main {
     public Main() {
 
         //Polymorfism
-        kaktus igge = new kaktus(20.0,Name.IGGE);
-        palm laura = new palm( 5.0,Name.LAURA);
-        kottattande meatloaf = new kottattande(0.7, Name.MEATLOAF);
-        palm putte = new palm(1.0, Name.PUTTE);
+        Växt igge = new kaktus(20,"Igge");
+        Växt laura = new palm( 5.0,"Laura");
+        Växt meatloaf = new kottattande(0.7, "Meatloaf");
+        Växt putte = new palm(1.0, "Putte");
         String v;
         while (true) {
             v = JOptionPane.showInputDialog("Vilken växt vill du vattna av Igge, Laura, Meatloaf, Putte?");
-            if (v.equals(igge.nameI.typeOfName) || v.equals(laura.nameL.typeOfName) || v.equals(meatloaf.nameM.typeOfName) || v.equals(putte.nameP.typeOfName)) {
+            if (v.equals(igge.getName()) || v.equals(laura.getName()) || v.equals(meatloaf.getName()) || v.equals(putte.getName())) {
                 JOptionPane.showMessageDialog(null, "Växten är inlaggd i växthotellet Greenest");
                 break;
             } else {
                 JOptionPane.showMessageDialog(null, "växten är ej inlaggd i växthotellet Greenest");
-            }
+             }
         }
-        if (v.equals(igge.nameI.typeOfName)) {
+        //polymorfism metoden hämtas från de olika objekten
+        if (v.equals(igge.getName())) {
             igge.print();
-        } else if (v.equals(laura.nameL.typeOfName)) {
+        } else if (v.equals(laura.getName())) {
            laura.print();
-        } else if (v.equals(meatloaf.nameM.typeOfName)) {
+        } else if (v.equals(meatloaf.getName())) {
             meatloaf.print();
-        } else if (v.equals(putte.nameP.typeOfName)) {
+        } else if (v.equals(putte.getName())) {
            putte.print();
         }
 

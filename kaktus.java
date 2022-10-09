@@ -1,13 +1,13 @@
 package Inlämningsuppgift1;
 
 import javax.swing.*;
+import java.util.StringJoiner;
 
 public class kaktus extends Växt implements printVäxt{
 
     //inkapsling
-    public Name nameI = Name.IGGE;
     private int water = 2;
-    public kaktus(double length, Name name) {
+    public kaktus(double length, String name) {
         super(length, name);
 
     }
@@ -22,7 +22,7 @@ public class kaktus extends Växt implements printVäxt{
 
     @Override
     public void print() {
-        JOptionPane.showMessageDialog(null,"Kaktusen: "+ nameI.typeOfName + " behöver " + getWater() +"cl "+
+        JOptionPane.showMessageDialog(null,"Kaktusen: "+ getName() + " behöver " + getWater() +"cl "+
                 Water.MINERALVATTEN.typeOfWater+" om dagen");
     }
 }
